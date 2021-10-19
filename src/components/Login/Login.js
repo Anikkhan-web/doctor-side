@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 import './Login.css'
@@ -6,6 +7,22 @@ import './Login.css'
 const Login = () => {
 
   const {signInUsingGoogle,usingSignWithEmailAndPassword,usingEmail,usingPassword,usingGithub}=useAuth();
+  const history = useHistory();
+  const location = useLocation();
+  const redirect = location.state?.from || '/home'
+
+const handleGoogle=()=>{
+
+   signInUsingGoogle()
+  .then((result) => {
+    history.push(redirect);
+  
+ })
+
+
+}
+
+
     return (
        
         <div className="container ">
@@ -36,7 +53,7 @@ const Login = () => {
                   </div>
                   <hr className="my-4"/>
                   <div className="d-grid mb-2">
-                    <button onClick={signInUsingGoogle} className="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                    <button onClick={handleGoogle} className="btn btn-google btn-login text-uppercase fw-bold" type="submit">
                       <i className="fab fa-google me-2"></i> Sign in with Google
                     </button>
                   </div>

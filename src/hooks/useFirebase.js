@@ -13,32 +13,21 @@ const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
 const [exist,setExist]=useState({});
 
-
-
     const auth = getAuth();
     
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
 
     const signInUsingGoogle = ()=>{
-
-    
-        const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-        .then((result) => {
-             setUser(result.user)
-            // const user = result.user;
-            // console.log(result.user);
-            
-          })
       
+     return   signInWithPopup(auth, googleProvider);
+       
     
     }
 
 
     const usingGithub=()=>{
-
-        const githubProvider = new GithubAuthProvider();
-
         signInWithPopup(auth, githubProvider)
   .then((result) => {
    
