@@ -22,6 +22,19 @@ const handleGoogle=()=>{
 
 }
 
+const handleGithub = ()=>{
+
+  usingGithub()
+  .then((result) => {
+   
+    history.push(redirect);
+  
+    // ...
+  })
+
+}
+
+
 
     return (
        
@@ -58,7 +71,7 @@ const handleGoogle=()=>{
                     </button>
                   </div>
                   <div className="d-grid">
-                    <button onClick={usingGithub} className="btn 
+                    <button onClick={handleGithub} className="btn 
                     bg-dark btn-facebook btn-login text-uppercase fw-bold" type="submit">
                       <i className="fab fa-facebook-f me-2"></i> Sign in with Github
                     </button>

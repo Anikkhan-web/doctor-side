@@ -28,14 +28,11 @@ const [exist,setExist]=useState({});
 
 
     const usingGithub=()=>{
-        signInWithPopup(auth, githubProvider)
-  .then((result) => {
-   
-    setUser(result.user) ;
-
-    // ...
-  })
+   return     signInWithPopup(auth, githubProvider);
+  
     }
+
+    
     useEffect(()=>{
 
         onAuthStateChanged(auth,user=>{
