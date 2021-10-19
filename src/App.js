@@ -52,10 +52,10 @@ function App() {
 
   </Route>
 
-   <Route path='/appointment/:userId'>
+   <PrivateRoute path='/appointment/:userId'>
     <Appointment></Appointment>
 
-  </Route>  
+  </PrivateRoute>  
     <Route path='/appointment'>
     <Appointment></Appointment>
 
