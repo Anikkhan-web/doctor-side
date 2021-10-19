@@ -57,11 +57,11 @@ function App() {
 
   </PrivateRoute>   
   
-  <PrivateRoute path='/contact'>
+  <Route path='/contact'>
     <Contact></Contact>
     
 
-  </PrivateRoute>
+  </Route>
    <Route path='/login'>
     <Login></Login>
 

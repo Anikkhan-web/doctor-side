@@ -42,16 +42,17 @@ const Header = () => {
       <span className="navbar-text d-flex">
       <Link className="nav-link">{user?.displayName}</Link>
       
-          {!user?.email || !exist? 
-
-<Link className="nav-link" to="/login">Login</Link>
+          {!user?.displayName || !exist ? 
+          <Link className="nav-link" to="/login">Login</Link>
+         
+            
+          
 
 
           
         :
 
-        <Link className="nav-link" to="/login" onClick={LogOut}>Logout</Link>
-         
+        <Link className="nav-link" to="/home" onClick={LogOut}>Logout</Link>
 
       
 
