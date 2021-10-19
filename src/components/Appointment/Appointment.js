@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+
 import { useParams } from 'react-router';
 // import edudata from './edudata.JSON'
 import data from './edudata.json'
 
 const Appointment = () => {
 
-    const {userId}= useParams();
-
-
+ const {userId}= useParams();
 const exactItem= data.filter(dt=>dt.id===userId);
-
-    
     
     return (
         <div>

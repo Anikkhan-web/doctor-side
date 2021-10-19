@@ -13,7 +13,7 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import Contact from './components/Contact/Contact';
 import AuthProvider from './Context/AuthProvider';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Service from './components/Service/Service';
 
 
@@ -55,13 +55,17 @@ function App() {
    <Route path='/appointment/:userId'>
     <Appointment></Appointment>
 
+  </Route>  
+    <Route path='/appointment'>
+    <Appointment></Appointment>
+
   </Route>   
   
-  <Route path='/contact'>
+  <PrivateRoute path='/contact'>
     <Contact></Contact>
     
 
-  </Route>
+  </PrivateRoute>
    <Route path='/login'>
    <Login></Login>
 
