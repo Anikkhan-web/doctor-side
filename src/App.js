@@ -39,7 +39,7 @@ function App() {
     <Services></Services>
 
   </Route>  
-   <Route path='/service/:id'>
+   <Route path='/service'>
     <Service></Service>
 
   </Route>   
@@ -52,10 +52,10 @@ function App() {
 
   </Route>
 
-   <PrivateRoute path='/appointment'>
+   <Route path='/appointment/:userId'>
     <Appointment></Appointment>
 
-  </PrivateRoute>   
+  </Route>   
   
   <Route path='/contact'>
     <Contact></Contact>
@@ -63,7 +63,7 @@ function App() {
 
   </Route>
    <Route path='/login'>
-    <Login></Login>
+   <Login></Login>
 
   </Route>
    <Route path='/registration'>
